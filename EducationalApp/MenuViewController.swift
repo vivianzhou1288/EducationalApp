@@ -22,6 +22,7 @@ class MenuViewController: UIViewController {
         view.backgroundColor = UIColor(red: 217, green: 217, blue: 217)
         
         profileButton.setImage(UIImage(named: "profilePic"), for: .normal)
+        profileButton.addTarget(self, action: #selector(clickedButton), for: .touchUpInside)
         profileButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(profileButton)
         
@@ -85,6 +86,11 @@ class MenuViewController: UIViewController {
         ])
         
     }
+    @objc func clickedButton(){
+        let vc = ProfileViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
     
 
 

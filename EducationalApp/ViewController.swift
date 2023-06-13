@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         
         nameLabel.text = "Name"
         nameLabel.font = .systemFont(ofSize: 30)
+//        nameLabel.font = UIFont(name: "CoveredByYourGrace-Regular", size: 30)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameLabel)
         
