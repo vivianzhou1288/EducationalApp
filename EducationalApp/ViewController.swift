@@ -11,11 +11,12 @@ class ViewController: UIViewController {
     
     let nameLabel = UILabel()
     let startButton = UIButton()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .gray
+        view.backgroundColor = UIColor(red: 217, green: 217, blue: 217)
         
         nameLabel.text = "Name"
         nameLabel.font = .systemFont(ofSize: 30)
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
         view.addSubview(nameLabel)
         
         startButton.setImage(UIImage(named: "startButton"), for: .normal)
+        startButton.addTarget(self, action: #selector(clickedButton), for: .touchUpInside)
         startButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(startButton)
         
@@ -43,7 +45,20 @@ class ViewController: UIViewController {
             
         ])
     }
-
+    
+    @objc func clickedButton(){
+        let vc = MenuViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        let newRed = CGFloat(red)/255
+        let newGreen = CGFloat(green)/255
+        let newBlue = CGFloat(blue)/255
+        
+        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
+    }
+}
