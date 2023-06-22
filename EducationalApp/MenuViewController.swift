@@ -28,6 +28,7 @@ class MenuViewController: UIViewController {
         
         psetButton.setTitle("Pset", for: .normal)
         psetButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
+        psetButton.addTarget(self, action: #selector(questionsClicked), for: .touchUpInside)
         psetButton.layer.cornerRadius = 7
         psetButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(psetButton)
@@ -91,7 +92,10 @@ class MenuViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    
+    @objc func questionsClicked(){
+        let vc = PsetViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 
 }
