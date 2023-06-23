@@ -16,11 +16,12 @@
 		AC9991EF2A377FEC00FD7AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9991EE2A377FEC00FD7AB0 /* Assets.xcassets */; };
 		AC9991F22A377FEC00FD7AB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9991F02A377FEC00FD7AB0 /* LaunchScreen.storyboard */; };
 		AC9991FA2A37862E00FD7AB0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9991F92A37862E00FD7AB0 /* MenuViewController.swift */; };
+		ACD0EBDB2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACD0EBDA2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf */; };
+		ACD0EBDD2A462D67003383B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EBDC2A462D67003383B9 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC6516942A38AE54009DF9EC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		AC6516962A38B550009DF9EC /* CoveredByYourGrace-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CoveredByYourGrace-Regular.ttf"; path = "../../../Downloads/Covered_By_Your_Grace/CoveredByYourGrace-Regular.ttf"; sourceTree = "<group>"; };
 		AC6516972A38D883009DF9EC /* PsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsetViewController.swift; sourceTree = "<group>"; };
 		AC9991E22A377FEB00FD7AB0 /* EducationalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9991E52A377FEB00FD7AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +32,8 @@
 		AC9991F12A377FEC00FD7AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC9991F32A377FEC00FD7AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9991F92A37862E00FD7AB0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ACD0EBDA2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoveredByYourGrace-Regular.ttf"; sourceTree = "<group>"; };
+		ACD0EBDC2A462D67003383B9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,19 +66,28 @@
 		AC9991E42A377FEB00FD7AB0 /* EducationalApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACD0EBD92A462AEF003383B9 /* Fonts */,
 				AC9991E52A377FEB00FD7AB0 /* AppDelegate.swift */,
 				AC9991E72A377FEB00FD7AB0 /* SceneDelegate.swift */,
 				AC9991E92A377FEB00FD7AB0 /* ViewController.swift */,
 				AC9991F92A37862E00FD7AB0 /* MenuViewController.swift */,
 				AC6516942A38AE54009DF9EC /* ProfileViewController.swift */,
 				AC6516972A38D883009DF9EC /* PsetViewController.swift */,
-				AC6516962A38B550009DF9EC /* CoveredByYourGrace-Regular.ttf */,
+				ACD0EBDC2A462D67003383B9 /* Constants.swift */,
 				AC9991EB2A377FEB00FD7AB0 /* Main.storyboard */,
 				AC9991EE2A377FEC00FD7AB0 /* Assets.xcassets */,
 				AC9991F02A377FEC00FD7AB0 /* LaunchScreen.storyboard */,
 				AC9991F32A377FEC00FD7AB0 /* Info.plist */,
 			);
 			path = EducationalApp;
+			sourceTree = "<group>";
+		};
+		ACD0EBD92A462AEF003383B9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ACD0EBDA2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC9991F22A377FEC00FD7AB0 /* LaunchScreen.storyboard in Resources */,
+				ACD0EBDB2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf in Resources */,
 				AC9991EF2A377FEC00FD7AB0 /* Assets.xcassets in Resources */,
 				AC9991ED2A377FEB00FD7AB0 /* Main.storyboard in Resources */,
 			);
@@ -151,6 +164,7 @@
 			files = (
 				AC6516982A38D883009DF9EC /* PsetViewController.swift in Sources */,
 				AC9991EA2A377FEB00FD7AB0 /* ViewController.swift in Sources */,
+				ACD0EBDD2A462D67003383B9 /* Constants.swift in Sources */,
 				AC9991E62A377FEB00FD7AB0 /* AppDelegate.swift in Sources */,
 				AC6516952A38AE54009DF9EC /* ProfileViewController.swift in Sources */,
 				AC9991E82A377FEB00FD7AB0 /* SceneDelegate.swift in Sources */,

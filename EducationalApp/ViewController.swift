@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         view.backgroundColor = UIColor(red: 217, green: 217, blue: 217)
         
         nameLabel.text = "Name"
-        nameLabel.font = .systemFont(ofSize: 30)
-//        nameLabel.font = UIFont(name: "CoveredByYourGrace-Regular", size: 30)
+        nameLabel.font = UIFont(name: "CoveredByYourGrace", size: 50)
+        nameLabel.textColor = UIColor(red: 181, green: 179, blue: 211)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameLabel)
         

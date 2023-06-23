@@ -23,13 +23,13 @@ class ProfileViewController: UIViewController {
         view.addSubview(profileImageView)
         
         nameLabel.text = "user7273462739"
-        nameLabel.font = .systemFont(ofSize: 25)
+        nameLabel.font = UIFont(name: "CoveredByYourGrace", size: 40)
         nameLabel.textColor = UIColor(red: 181, green: 179, blue: 211)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameLabel)
         
         pointLabel.text = "283569279384 pts"
-        pointLabel.font = .systemFont(ofSize: 25)
+        pointLabel.font = UIFont(name: "CoveredByYourGrace", size: 40)
         pointLabel.textColor = UIColor(red: 181, green: 179, blue: 211)
         pointLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pointLabel)

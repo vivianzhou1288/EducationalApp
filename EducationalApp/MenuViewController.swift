@@ -27,6 +27,7 @@ class MenuViewController: UIViewController {
         view.addSubview(profileButton)
         
         psetButton.setTitle("Pset", for: .normal)
+        psetButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         psetButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         psetButton.addTarget(self, action: #selector(questionsClicked), for: .touchUpInside)
         psetButton.layer.cornerRadius = 7
@@ -34,18 +35,21 @@ class MenuViewController: UIViewController {
         view.addSubview(psetButton)
         
         videoButton.setTitle("Videos", for: .normal)
+        videoButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         videoButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         videoButton.layer.cornerRadius = 7
         videoButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(videoButton)
         
         essayButton.setTitle("Essays", for: .normal)
+        essayButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         essayButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         essayButton.layer.cornerRadius = 7
         essayButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(essayButton)
         
         labButton.setTitle("Labs", for: .normal)
+        labButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         labButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         labButton.layer.cornerRadius = 7
         labButton.translatesAutoresizingMaskIntoConstraints = false
@@ -65,25 +69,29 @@ class MenuViewController: UIViewController {
         NSLayoutConstraint.activate([
             psetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             psetButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -150),
-            psetButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3)
+            psetButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.35),
+            psetButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05)
         ])
         
         NSLayoutConstraint.activate([
-            videoButton.topAnchor.constraint(equalTo: psetButton.topAnchor, constant: 85),
+            videoButton.topAnchor.constraint(equalTo: psetButton.topAnchor, constant: 120),
             videoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            videoButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3)
+            videoButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.35),
+            videoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05)
         ])
-        
+
         NSLayoutConstraint.activate([
-            essayButton.topAnchor.constraint(equalTo: videoButton.topAnchor, constant: 85),
+            essayButton.topAnchor.constraint(equalTo: videoButton.topAnchor, constant: 120),
             essayButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            essayButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3)
+            essayButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.35),
+            essayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05)
         ])
-        
+
         NSLayoutConstraint.activate([
-            labButton.topAnchor.constraint(equalTo: essayButton.topAnchor, constant: 85),
+            labButton.topAnchor.constraint(equalTo: essayButton.topAnchor, constant: 120),
             labButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            labButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3)
+            labButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.35),
+            labButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05)
         ])
         
     }

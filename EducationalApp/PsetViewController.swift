@@ -21,13 +21,13 @@ class PsetViewController: UIViewController {
         view.backgroundColor = UIColor(red: 217, green: 217, blue: 217)
         
         psetLabel.text = "PSET"
-        psetLabel.font = .systemFont(ofSize: 30)
+        psetLabel.font = UIFont(name: "CoveredByYourGrace", size: 40)
         psetLabel.textColor = UIColor(red: 181, green: 179, blue: 211)
         psetLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(psetLabel)
         
         questionLabel.text = "4 + 3 = ?"
-        questionLabel.font = .systemFont(ofSize: 25)
+        questionLabel.font = UIFont(name: "CoveredByYourGrace", size: 35)
         questionLabel.textColor = .white
         questionLabel.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         questionLabel.textAlignment = .center
@@ -39,7 +39,7 @@ class PsetViewController: UIViewController {
         bottomLine.frame = CGRect(x: 0.0, y: answerTextField.frame.height - 1, width: answerTextField.frame.width, height: 1.0)
         bottomLine.backgroundColor = UIColor.white.cgColor
         answerTextField.placeholder = "Type Your Answer"
-        answerTextField.font = .systemFont(ofSize: 25)
+        answerTextField.font = UIFont(name: "CoveredByYourGrace", size: 30)
         answerTextField.textColor = .white
         answerTextField.textAlignment = .center
 //        answerTextField.borderStyle = UITextField.BorderStyle.none
@@ -48,6 +48,7 @@ class PsetViewController: UIViewController {
         view.addSubview(answerTextField)
         
         submitButton.setTitle("Submit", for: .normal)
+        submitButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         submitButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         submitButton.layer.cornerRadius = 7
         submitButton.translatesAutoresizingMaskIntoConstraints = false
