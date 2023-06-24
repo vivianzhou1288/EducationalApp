@@ -18,6 +18,9 @@
 		AC9991FA2A37862E00FD7AB0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9991F92A37862E00FD7AB0 /* MenuViewController.swift */; };
 		ACD0EBDB2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACD0EBDA2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf */; };
 		ACD0EBDD2A462D67003383B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EBDC2A462D67003383B9 /* Constants.swift */; };
+		ACD0EBDF2A465B27003383B9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EBDE2A465B27003383B9 /* Question.swift */; };
+		ACD0EBE12A466244003383B9 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EBE02A466244003383B9 /* PopUpViewController.swift */; };
+		ACD0EBE32A469E4E003383B9 /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EBE22A469E4E003383B9 /* LevelUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		AC9991F92A37862E00FD7AB0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ACD0EBDA2A462B73003383B9 /* CoveredByYourGrace-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoveredByYourGrace-Regular.ttf"; sourceTree = "<group>"; };
 		ACD0EBDC2A462D67003383B9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ACD0EBDE2A465B27003383B9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		ACD0EBE02A466244003383B9 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		ACD0EBE22A469E4E003383B9 /* LevelUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +79,14 @@
 				AC9991F92A37862E00FD7AB0 /* MenuViewController.swift */,
 				AC6516942A38AE54009DF9EC /* ProfileViewController.swift */,
 				AC6516972A38D883009DF9EC /* PsetViewController.swift */,
+				ACD0EBE02A466244003383B9 /* PopUpViewController.swift */,
 				ACD0EBDC2A462D67003383B9 /* Constants.swift */,
+				ACD0EBDE2A465B27003383B9 /* Question.swift */,
 				AC9991EB2A377FEB00FD7AB0 /* Main.storyboard */,
 				AC9991EE2A377FEC00FD7AB0 /* Assets.xcassets */,
 				AC9991F02A377FEC00FD7AB0 /* LaunchScreen.storyboard */,
 				AC9991F32A377FEC00FD7AB0 /* Info.plist */,
+				ACD0EBE22A469E4E003383B9 /* LevelUpViewController.swift */,
 			);
 			path = EducationalApp;
 			sourceTree = "<group>";
@@ -163,11 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6516982A38D883009DF9EC /* PsetViewController.swift in Sources */,
+				ACD0EBDF2A465B27003383B9 /* Question.swift in Sources */,
 				AC9991EA2A377FEB00FD7AB0 /* ViewController.swift in Sources */,
 				ACD0EBDD2A462D67003383B9 /* Constants.swift in Sources */,
+				ACD0EBE32A469E4E003383B9 /* LevelUpViewController.swift in Sources */,
 				AC9991E62A377FEB00FD7AB0 /* AppDelegate.swift in Sources */,
 				AC6516952A38AE54009DF9EC /* ProfileViewController.swift in Sources */,
 				AC9991E82A377FEB00FD7AB0 /* SceneDelegate.swift in Sources */,
+				ACD0EBE12A466244003383B9 /* PopUpViewController.swift in Sources */,
 				AC9991FA2A37862E00FD7AB0 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

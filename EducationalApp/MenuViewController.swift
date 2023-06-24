@@ -7,9 +7,12 @@
 
 import UIKit
 
+var points = 0
+
 class MenuViewController: UIViewController {
     
     let profileButton = UIButton()
+    let pointLabel = UILabel()
     let psetButton = UIButton()
     let videoButton = UIButton()
     let essayButton = UIButton()
@@ -26,7 +29,13 @@ class MenuViewController: UIViewController {
         profileButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(profileButton)
         
-        psetButton.setTitle("Pset", for: .normal)
+        pointLabel.text = String(points) + " pts"
+        pointLabel.font = UIFont(name: "CoveredByYourGrace", size: 35)
+        pointLabel.textColor = UIColor(red: 181, green: 179, blue: 211)
+        pointLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(pointLabel)
+        
+        psetButton.setTitle("Math", for: .normal)
         psetButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         psetButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         psetButton.addTarget(self, action: #selector(questionsClicked), for: .touchUpInside)
@@ -41,14 +50,14 @@ class MenuViewController: UIViewController {
         videoButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(videoButton)
         
-        essayButton.setTitle("Essays", for: .normal)
+        essayButton.setTitle("English", for: .normal)
         essayButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         essayButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         essayButton.layer.cornerRadius = 7
         essayButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(essayButton)
         
-        labButton.setTitle("Labs", for: .normal)
+        labButton.setTitle("Science", for: .normal)
         labButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         labButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         labButton.layer.cornerRadius = 7
@@ -61,9 +70,14 @@ class MenuViewController: UIViewController {
     func setUpConstraints(){
         NSLayoutConstraint.activate([
             profileButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            profileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            profileButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.37),
-            profileButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15)
+            profileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            profileButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.30),
+            profileButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.12)
+        ])
+        
+        NSLayoutConstraint.activate([
+            pointLabel.topAnchor.constraint(equalTo: profileButton.topAnchor, constant: 35),
+            pointLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -105,5 +119,10 @@ class MenuViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
+}
 
+extension ViewController: updatePoints{
+    func updatePoints(point: Int) {
+        points += point
+    }
 }

@@ -9,18 +9,30 @@ import UIKit
 
 class PsetViewController: UIViewController {
     
+    var questions: [Question] = []
+    var number = 0
+    var points = 0
     let psetLabel = UILabel()
     let questionLabel = UILabel()
     let answerTextField = UITextField()
     var bottomLine = CALayer()
     let submitButton = UIButton()
 
+    weak var del: updatePoints?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(red: 217, green: 217, blue: 217)
         
-        psetLabel.text = "PSET"
+        let question1 = Question(question: "4 + 3 = ?", answer: "7", point: 3)
+        let question2 = Question(question: "9 - 4 = ?", answer: "5", point: 3)
+        let question3 = Question(question: "8 + 8 = ?", answer: "16", point: 4)
+        let question4 = Question(question: "25 - 14 = ?", answer: "11", point: 4)
+        let question5 = Question(question: "30 - 18 = ?", answer: "12", point: 6)
+        questions = [question1, question2, question3, question4, question5]
+        
+        psetLabel.text = "Math"
         psetLabel.font = UIFont(name: "CoveredByYourGrace", size: 40)
         psetLabel.textColor = UIColor(red: 181, green: 179, blue: 211)
         psetLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -51,6 +63,7 @@ class PsetViewController: UIViewController {
         submitButton.titleLabel?.font = UIFont(name: "CoveredByYourGrace", size: 25)
         submitButton.backgroundColor = UIColor(red: 181, green: 179, blue: 211)
         submitButton.layer.cornerRadius = 7
+        submitButton.addTarget(self, action: #selector(correct), for: .touchUpInside)
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(submitButton)
         
@@ -83,5 +96,35 @@ class PsetViewController: UIViewController {
         ])
     }
     
+    @objc func correct(){
+        if answerTextField.text == questions[number].answer{
+            if number < 4 {
+                number += 1
+                questionLabel.text = questions[number].question
+                points += questions[number].point
+            }
+            
+            if number == 4 {
+                let levelupVC = LevelUpViewController()
+                levelupVC.modalPresentationStyle = .overCurrentContext
+                levelupVC.modalTransitionStyle = .crossDissolve
+                levelupVC.popoverPresentationController?.permittedArrowDirections = .any
+                present(levelupVC, animated: true, completion: nil)
+            }
+        }
+        else{
+            let popupVC = PopUpViewController()
+            popupVC.modalPresentationStyle = .overCurrentContext
+            popupVC.modalTransitionStyle = .crossDissolve
+            popupVC.popoverPresentationController?.permittedArrowDirections = .any
+            present(popupVC, animated: true, completion: nil)
+        }
+        
+        answerTextField.text = ""
+    }
+    
+}
 
+protocol updatePoints: UIViewController {
+    func updatePoints(point: Int)
 }
